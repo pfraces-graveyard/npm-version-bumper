@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "postcommit": "npm run broadcast"
+  }
+}
