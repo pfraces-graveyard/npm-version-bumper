@@ -92,3 +92,15 @@ To Do
 
 Rewrite `bin/` scripts in `nodejs` for better compatibility
 (`shelljs` comes handy for those scripts)
+
+References
+----------
+
+  * <https://docs.npmjs.com/cli/versio://docs.npmjs.com/cli/version>
+  * <http://stackoverflow.com/questions/28421489/what-is-the-convention-for-versioning-npm-packages-prior-to-1-0-0>
+  * <http://carrot.is/coding/npm_prerelease>
+  * <https://github.com/mikaelbr/mversion>
+  * <https://github.com/npm/npm/pull/5518>
+  * <https://github.com/npm/npm/issues/6053>
+  * <http://stackoverflow.com/questions/10972176/find-the-version-of-an-installed-npm-package>
+  * <https://docs.npmjs.com/misc/scripts#package-json-vars>
