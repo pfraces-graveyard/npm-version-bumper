@@ -37,7 +37,7 @@ the `--` delimiter
 
     npm run version 2.5.0
 
-### Relase
+### Release
 
     npm run version-release
 
