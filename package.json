@@ -1,5 +1,6 @@
 {
-  "name": "foo",
+  "name": "npm-version-bumper",
+  "private": "true",
   "version": "0.1.0",
   "devDependencies": {
     "mversion": "*"

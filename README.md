@@ -27,7 +27,7 @@ Usage
 
 ### Prepare for development iteration
 
-    npm run version devel
+    npm run version-devel
 
   * current version: `2.5.1-0`
   * commit: `Preparing for next development iteration (2.5.1-0)`
@@ -35,11 +35,20 @@ Usage
 
 ### Relase
 
-    npm run version release
+    npm run version-release
 
   * current version: `2.5.1`
   * commit: `Release 2.5.1`
   * tag: `2.5.1`
+
+### Bump
+
+    npm run bump
+
+A shortcut for the most common use case:
+
+ 1. `npm run version-release`
+ 2. `npm run version-devel`
 
 Design decisions
 ----------------
