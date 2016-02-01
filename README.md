@@ -22,10 +22,20 @@ Usage
 
 ### Fixed version
 
-    npm run version 2.5.0
+    npm run version -- 2.5.0
 
   * no commit
   * no tag
+
+As of `npm@2.0`, npm run scripts can receive parameters following a `--`
+delimiter indicating the end of npm params and the beginning of task params
+
+    npm run version -- --prerelease
+
+Non-dasheed arguments (like the version number `2.5.0`) doesn't seem to require
+the `--` delimiter
+
+    npm run version 2.5.0
 
 ### Relase
 
