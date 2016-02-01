@@ -20,7 +20,7 @@ Then
 Usage
 -----
 
-### Set a fixed version
+### Fixed version
 
     npm run version 2.5.0
 
