@@ -68,13 +68,25 @@ Design decisions
 `mversion` package is used instead of `npm version` to be able to bump several
 files at once: `package.json` and `bower.json` in our case
 
-`.mversionrc` file contains a hook to push the changes after a commit is done
-by `mversion`
+~~`.mversionrc` file contains a hook to push the changes after a commit is done
+by `mversion`~~
+
+**[Upd]** complex tasks are saved in its own scripts at `bin/`
+
+**[To Do]** rewrite `bin/` scripts in `nodejs` for better compatibility
+(`shelljs` comes handy for those scripts)
+
+**[Upd]** git operations are specified in the shell scripts at `bin/`
 
 `npm run broadcast` pushes changes and tags to all available git remotes
 
 `npm run version-current` is needed to get an updated version in the environment
 variable
 
-`npm run version devel` uses `git` directly to commit the changes instead of
-using `mversion` to avoid creating a `git tag` for that commit
+~~`npm run version-devel` uses `git` directly to commit the changes instead of
+using `mversion` to avoid creating a `git tag` for that commit~~
+
+**[Upd]** npm run scripts are used for 2 main use cases:
+
+  * aliasing node CLI scripts to avoid global installations
+  * aliasing scripts located at `bin/` to avoid path mistakes, `pwd`, ...
