@@ -6,11 +6,11 @@
     "mversion": "*"
   },
   "scripts": {
-    "pkgversion": "echo $npm_package_version",
+    "broadcast": "git remote | while read remote; do git push $remote master && git push --tags; done",
     "version": "mversion",
+    "version-current": "echo $npm_package_version", 
     "version-release": "mversion patch -m 'Release %s' --tag '%s'",
-    "version-devel": "mversion preminor && git commit -am \"Preparing for next development iteration ($(npm run pkgversion))\"",
-    "bump": "npm run version-release && npm run version-devel",
-    "broadcast": "git remote | while read remote; do git push $remote master && git push --tags; done"
+    "version-devel": "mversion preminor && git commit -am \"Preparing for next development iteration ($(npm run version-current))\"",
+    "version-bump": "npm run version-release && npm run version-devel"
   }
 }

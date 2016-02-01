@@ -6,13 +6,15 @@ A set of npm scripts to automate the process of version releases
 Install
 -------
 
-**This proof of concept will make commits to its repo and will try to push
-those commits to its remotes**
+This proof of concept will make commits to its repo and will try to push
+those commits to its remotes.
 
-First, fork the repo and then:
+To avoid making a mess in the original repository, **first fork this repo**
 
-    git clone <registry/version-bumper>
-    cd version-bumper
+Then
+
+    git clone <registry/npm-version-bumper>
+    cd npm-version-bumper
     npm install
 
 Usage
@@ -25,14 +27,6 @@ Usage
   * no commit
   * no tag
 
-### Prepare for development iteration
-
-    npm run version-devel
-
-  * current version: `2.5.1-0`
-  * commit: `Preparing for next development iteration (2.5.1-0)`
-  * no tag
-
 ### Relase
 
     npm run version-release
@@ -41,11 +35,19 @@ Usage
   * commit: `Release 2.5.1`
   * tag: `2.5.1`
 
+### Development
+
+    npm run version-devel
+
+  * current version: `2.5.1-0`
+  * commit: `Preparing for next development iteration (2.5.1-0)`
+  * no tag
+
 ### Bump
 
-    npm run bump
+    npm run version-bump
 
-A shortcut for the most common use case:
+Shortcut for the most common use case:
 
  1. `npm run version-release`
  2. `npm run version-devel`
@@ -61,7 +63,7 @@ by `mversion`
 
 `npm run broadcast` pushes changes and tags to all available git remotes
 
-`npm run pkgversion` is needed to get an updated version in the environment
+`npm run version-current` is needed to get an updated version in the environment
 variable
 
 `npm run version devel` uses `git` directly to commit the changes instead of
