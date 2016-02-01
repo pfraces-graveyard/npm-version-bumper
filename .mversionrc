@@ -1,5 +1,0 @@
-{
-  "scripts": {
-    "postcommit": "npm run --silent broadcast"
-  }
-}

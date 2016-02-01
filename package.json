@@ -9,8 +9,8 @@
     "broadcast": "git remote | while read remote; do git push $remote master && git push --tags; done",
     "version": "mversion",
     "version-current": "echo $npm_package_version", 
-    "version-release": "mversion patch -m 'Release %s' --tag '%s'",
-    "version-devel": "mversion preminor && git commit -am \"Preparing for next development iteration ($(npm run version-current))\"",
+    "version-release": "mversion patch && git commit -am 'Release %s' --tag '%s' && npm run broadcast",
+    "version-devel": "mversion preminor && git commit -am \"Preparing for next development iteration ($(npm run version-current))\" && npm run broadcast",
     "version-bump": "npm run version-release && npm run version-devel"
   }
 }
